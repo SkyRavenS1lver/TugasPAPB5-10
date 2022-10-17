@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class DetailAnimalActivity extends AppCompatActivity {
+public class DetailGameActivity extends AppCompatActivity {
 
     TextView txtName, txtColor, txtDesc;
 
@@ -20,9 +20,9 @@ public class DetailAnimalActivity extends AppCompatActivity {
         txtDesc = findViewById(R.id.txt_desc);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra(AnimalAdapter.MESSAGE_EXTRA);
-        String color = intent.getStringExtra(AnimalAdapter.MESSAGE_EXTRA2);
-        String desc = intent.getStringExtra(AnimalAdapter.MESSAGE_EXTRA3);
+        String name = intent.getStringExtra(GameAdapter.MESSAGE_EXTRA);
+        String color = intent.getStringExtra(GameAdapter.MESSAGE_EXTRA2);
+        String desc = intent.getStringExtra(GameAdapter.MESSAGE_EXTRA3);
 
         txtName.setText(name);
         txtColor.setText(color);

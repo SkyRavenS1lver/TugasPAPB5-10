@@ -1,45 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center_horizontal"
-    android:padding="12dp"
     android:layout_height="match_parent"
-    tools:context=".DetailAnimalActivity">
-
-    <TextView
-        android:id="@+id/txt_name"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:text="Sample Title"
-        />
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="@drawable/bghp"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
 
-    <TextView
-        android:id="@+id/txt_color"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:text="Sample Color"
-        />
+                    android:layout_gravity="center"
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Sample Title"
+                    />
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitCenter"
+                    />
 
-    <TextView
-        android:id="@+id/txt_desc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="2"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s
-        tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specim
-        en book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-         was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub
-         lishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        android:ellipsize="end"
-        />
+                <TextView
+
+                    android:id="@+id/txt_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s
+            tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specim
+            en book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
+             was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub
+             lishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    />
+            </LinearLayout>
+        </ScrollView>
 
 
+    </LinearLayout>
 </LinearLayout>
