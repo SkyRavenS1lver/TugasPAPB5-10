@@ -4,28 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailGameActivity extends AppCompatActivity {
 
-    TextView txtName, txtColor, txtDesc;
+    TextView txtName, txtDesc;
+    ImageView picture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_animal);
+        setContentView(R.layout.activity_detail_game);
 
         txtName = findViewById(R.id.txt_name);
-        txtColor = findViewById(R.id.txt_color);
+        picture = findViewById(R.id.picture);
         txtDesc = findViewById(R.id.txt_desc);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra(GameAdapter.MESSAGE_EXTRA);
-        String color = intent.getStringExtra(GameAdapter.MESSAGE_EXTRA2);
-        String desc = intent.getStringExtra(GameAdapter.MESSAGE_EXTRA3);
+        String name = intent.getStringExtra("judul");
+        int pictures = intent.getIntExtra("gambar", 0);
+        String desc = intent.getStringExtra("desc");
 
         txtName.setText(name);
-        txtColor.setText(color);
+        picture.setImageResource(pictures);
         txtDesc.setText(desc);
     }
 

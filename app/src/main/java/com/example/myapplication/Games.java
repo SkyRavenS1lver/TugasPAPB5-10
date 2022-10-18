@@ -8,9 +8,9 @@ public class Games {
 
     public Games(
             String name,
-            String desc,
             int pic,
-            String category
+            String category,
+            String desc
     ) {
         this.name =  name;
         this.desc = desc;
